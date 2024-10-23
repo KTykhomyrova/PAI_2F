@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "output1"></p>
+    <p id = "output2"></p>
+    <p id = "output3"></p>
+    <p id = "output4"></p>
+    <script>
+        var bok_a = parseInt(prompt("Podaj liczbę:"));
+        var bok_b = parseInt(prompt("Podaj liczbę:"));
+        //document.write(`bok a = <b>${bok_a} cm</b><br>`);
+        //document.write(`bok b = <b>${bok_b} cm</b><br>`);
+        let pole = bok_a * bok_b;
+        //document.write(`Pole = <b>${pole} cm^2</b><br>`);
+        let obwod = 2*(bok_a+bok_b);
+        //document.write(`Obwód = <b>${obwod} cm</b><br>`)
+
+        document.getElementById("output1").innerHTML = "bok a = <b>" + bok_a + "cm</b>";
+        document.getElementById("output2").innerHTML = "bok b = <b>" + bok_b + " cm</b>";
+        document.getElementById("output3").innerHTML = "Pole = <b>" + pole + " cm^2</b>";
+        document.getElementById("output4").innerHTML = "Obwód = <b>" + obwod + " cm</b>";
+    </script>
+    
+</body>
+</html>

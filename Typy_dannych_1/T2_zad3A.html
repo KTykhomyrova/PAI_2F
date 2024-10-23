@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let country = "Poland";
+        let continent = "Europa";
+        let population = 1000000;
+
+        document.write(`Country: ${country}</br>Kontynent: ${continent}</br>Populacja: ${population}`);
+        console.log(`Country: ${country}, kontynent: ${continent}, populacja: ${population}`);
+        alert(`Country: ${country}, kontynent: ${continent}, populacja: ${population}`);
+        document.getElementById("output").innerHTML = `Country: ${country}</br>Kontynent: ${continent}</br>Populacja: ${population}`;
+    </script>
+</body>
+</html>

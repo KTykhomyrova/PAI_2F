@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, td, th{
+            border: solid black 1px;
+        }
+    </style>
+    <table>
+        <tr>
+            <script>
+                let inf = new Array("Imię", "Nazwisko", "Wiek", "Wzrost", "Data urodzenia", "Klassa");
+                for (let i = 0; i < inf.length; i++) {
+                     document.write(`<th> ${inf[i]} </th>`);
+                        
+                }
+            </script>
+        </tr>
+        <tr>
+            <script>
+                let data = new Array("Kateryna", "Tykhomyrova", "15", "168", "02.12.2008", "2F");
+                for (let i = 0; i < data.length; i++) {
+                    document.write("<th>" + data[i] + "</th>")
+                    
+                }                
+            </script>
+        </tr>
+    </table>
+</body>
+</html>

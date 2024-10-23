@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let numbers = new Array();
+        for (let i = 0; i < 5; i++) {
+            numbers[i]= parseInt(prompt(`Podaj ${i + 1} liczbę: `));
+            
+        }
+
+        let suma = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            suma += numbers[i];
+        }
+
+        document.getElementById("output").innerHTML = `Suma liczb: ${suma}`;
+    </script>
+</body>
+</html>

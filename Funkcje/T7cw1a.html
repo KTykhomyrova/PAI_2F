@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <p id="div"></p>
+    <script>
+        /*function operations(x, y){
+            let sum = x+y;
+            document.getElementById("sum").innerHTML = 'Suma: ' + sum;
+            let sub = x-y;
+            document.getElementById("sub").innerHTML = "Odejmowanie" + sub;
+            let mul = x*y;
+            document.getElementById("mul").innerHTML = "Mnożenie: " + mul;
+            let div;
+            if (y == 0){
+                document.getElementById("div").innerHTML = "Nie można dzielić przez 0";
+            }
+            else{
+                div = x/y;
+                document.getElementById("div").innerHTML = "Dzielenie: " + div;
+            }
+        }*/
+        function addition(x ,y){
+            return x+y;
+        }
+
+        function subtraction(x, y){
+            return x-y;
+        }
+
+        function multiplication(x, y){
+            return x*y;
+        }
+
+        function division(x, y){
+            if (y == 0){
+                out.innerHTML += "Nie można dzielić przez 0<br>";
+            }
+            else{
+                return x/y;
+            }
+        }
+
+        let out = document.getElementById("output");
+        let a = parseInt(prompt("Podaj 1 liczbę: "));
+        let b = parseInt(prompt("Podaj 2 liczbę: "));
+        
+        let sum = addition(a, b);
+        out.innerHTML += `Suma: ${sum}<br>`;
+
+        let sub = subtraction(a, b);
+        out.innerHTML += `Odejmowanie: ${sub}<br>`; 
+
+        let mul = multiplication(a, b);
+        out.innerHTML += `Mnożenie: ${mul}<br>`;
+
+        let div = division(a, b);
+        out.innerHTML += `Dzielenie: ${div}`; 
+    </script>
+</body>
+</html>

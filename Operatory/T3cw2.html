@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "output"></p>
+    <script>
+        var name = prompt("Podaj imię:");
+        var last_name = prompt("Podaj nazwisko:");
+        var adress = prompt("Podaj adress:");
+        document.write(`Twoje imię: ${name}, twoje nazwisko: ${last_name}, twój adres: ${adress}`);
+        document.getElementById("output").innerHTML = "Twoje imię: " + name + ", twoje nazwisko: " + last_name + ", twój adres: " + adress;
+    </script>
+</body>
+</html>

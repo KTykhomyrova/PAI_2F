@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, td, th{
+            border: solid black 1px;
+        }
+    </style>
+    <table>
+        <tr>
+            <script>
+                let inf = new Array("Imię", "Nazwisko", "Wiek", "Wzrost", "Data urodzenia", "Klassa");
+                for (let i = 0; i < inf.length; i++) {
+                    document.write(`<th> ${inf[i]} </th>`);
+                    
+                }
+            </script>
+        </tr>
+        <tr>
+            <script>
+                let name = prompt("Podaj imię: ");
+                let lastName = prompt("Podaj nazwisko: ");
+                let age = prompt("Podaj wiek: ");
+                let leight = prompt("Podaj wzrost: ");
+                let date = prompt("Podaj datę urodzenia: ");
+                let grade = prompt("Podaj klasę: ")
+
+                let data = new Array(name, lastName, age, leight, date, grade);
+
+                for (let i = 0; i < data.length; i++) {
+                    document.write("<th>" + data[i] + "</th>")
+                    
+                }
+
+                
+            </script>
+        </tr>
+    </table>
+</body>
+</html>

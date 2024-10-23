@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let a = parseInt(prompt("Podaj 1 liczbę: "));
+        let b = parseInt(prompt("Podaj 2 liczbę: "));
+        var out = document.getElementById("output");
+
+        let sum = (x, y) => x+y;
+        let sum1 = sum(a, b);
+        out.innerHTML += `Suma: ${sum1} <br>`;
+
+        let sub = (x, y) => x-y;
+        let sub1 = sub(a, b);
+        out.innerHTML += `Odejmowanie: ${sub1} <br>`;
+
+        let mul = (x, y) => x*y;
+        let mul1 = mul(a, b);
+        out.innerHTML += `Mnożenie: ${mul1} <br>`;
+
+        let div = (x, y) =>{
+            if (y==0){
+                out.innerHTML += `Nie można dzielić pzez 0<br>`;
+            }
+            else{
+                let div = x/y;
+                return div;
+            }
+        }
+        let div1 = div(a, b);
+        out.innerHTML += `Dzielenie: ${div1}`;
+        
+        
+    </script>
+</body>
+</html>

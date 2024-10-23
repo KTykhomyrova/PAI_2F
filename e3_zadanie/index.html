@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witryna internrtowa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formatowanie dokumentów HTML</h1>
+    </header>
+    <section class="panels">
+        <div class="container">
+            <div class="blok">
+                <h2>Przykład listy - hobby</h2>
+                <ul>
+                    <li>muzyka</li>
+                    <li>turystyka</li>
+                    <ol>
+                        <li>góry</li>
+                        <li>jeziora</li>
+                        <li>na rowerze</li>
+                    </ol>
+                    <li>książki</li>
+                </ul>
+            </div>
+            <div class="blok">
+                <h2>Przykład tabeli - rozkład dnia</h2>
+                <table>  
+                    <thead>
+                        <tr>
+                            <th>Pora dnia</th>
+                            <th>obowiązki</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>rano</td>
+                            <td>nauka</td>
+                        </tr>
+                        <tr>
+                            <td>południe</td>
+                            <td>zajęcia dodatkowe</td>
+                        </tr>
+                        <tr>
+                            <td>popoludnie</td>
+                            <td rowspan="2">moje hobby</td>
+                        </tr>
+                        <tr>
+                            <td>wieczór</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="blok3">
+                <img src="cb.png" alt="technologia web">
+            </div>
+        </div>
+    </section>
+    <main>
+        <label>Podaj rozmiar tekstu w procentach:</label>
+        <input type="number" id="liczba"> %<br>
+        
+        <label for="text"></label>
+        <select id="imie">
+        <option value="p">prosty</option>
+        <option value="k">kursyw</option>
+        </select> 
+        <br>
+        <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+        <button class="red"></button>
+        <button class="green"></button>
+        <button class="blue"></button><br>
+        <h3>To jest przykład paragrafu, który może być dowolnie formatowany przez 
+            JavaScript</h3>
+    </main>
+    <footer>
+        <p>Formatowaniem tekstu zajmował się: <i>Kateryna Tykhomyrova</i></p><br>
+        <a href="">Odwiedź także</a>
+    </footer>
+</body>
+</html>
