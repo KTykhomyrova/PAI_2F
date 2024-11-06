@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        var num1 = parseInt(prompt("Podaj liczbę 1:"));
+        var num2 = parseInt(prompt("Podaj liczbę 2:"));
+        var sing = prompt("Podaj znaczek");
+        var out = document.getElementById("output");
+
+        /*if (sing == "/"){
+            if(num2 == 0){
+                out.innerHTML = "Nie można dzielić przez 0";
+            }
+            else{
+                out.innerHTML = num1/num2;
+            }
+        }
+        else if (sing == "+"){
+            out.innerHTML = num1 + num2;
+        }
+        else if (sing == "-"){
+            out.innerHTML = num1 - num2;
+        }
+        else if(sing == "*"){
+            out.innerHTML = num1 * num2;
+        }
+        else{
+            out.innerHTML = "Błąd";
+        }*/
+       switch (sing) {
+        case "/":
+            if(num2 == 0){
+                out.innerHTML = "Nie można dzielić przez 0";
+            }
+            else{
+                out.innerHTML = num1/num2;
+            }
+            break;
+        case "+":
+            out.innerHTML = num1 + num2;
+            break;
+        case "-":
+            out.innerHTML = num1 - num2;
+            break;
+        case "*":
+            out.innerHTML = num1 * num2;
+            break;
+        default:
+            out.innerHTML = "Błąd";
+            break;
+       }
+    </script>
+</body>
+</html>

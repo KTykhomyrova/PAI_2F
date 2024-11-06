@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        var number = parseInt(prompt("Podaj liczbę:"));
+        var out = document.getElementById("output");
+
+        if(number%2==0){
+            out.innerHTML = "Podałeś liczbę parzystą";
+        }
+        else if (number%2==1){
+            out.innerHTML = "Podałeś liczbę nieparzystą";
+        }
+    </script>
+</body>
+</html>

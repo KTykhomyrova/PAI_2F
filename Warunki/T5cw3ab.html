@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="output"></p>
+<body>
+    <script>
+        var out = document.getElementById("output");
+        var rating = parseInt(prompt("Podaj ocenę od 1 do 6"));
+        /*if (rating == 1){
+            out.innerHTML = "Ocena niedostateczna";
+        }
+        else if(rating == 2){
+            out.innerHTML = "dopuszczający ";
+        }
+        else if (rating == 3){
+            out.innerHTML = "dostateczny";
+        }
+        else if (rating == 4){
+            out.innerHTML = "dobry";
+        }
+        else if (rating == 5){
+            out.COMMENT_NODE = "bardzo dobry";
+        }
+        else if (rating == 6){
+            out.innerHTML = "celujący";
+        }
+        else{
+            out.innerHTML = "Niepoprawny format oceny"
+        }*/
+       
+        switch(rating){
+            case 1:
+                out.innerHTML = "Niedostateczny"; 
+                break; 
+            case 2:
+                out.innerHTML = "dopuszczający";
+                break;
+            case 3:
+                out.innerHTML = "dostateczny";
+                break;
+            case 4:
+                out.innerHTML = "dobry";
+                break;
+            case 5:
+                out.innerHTML = "bardzo dobry";
+                break;
+            case 6:
+                out.innerHTML = "celujący";
+                break;
+            default:
+                out.innerHTML= "Nie znam takiego koloru";
+        }
+    </script>
+</body>
+</html>
