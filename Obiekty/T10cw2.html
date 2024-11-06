@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let out = document.getElementById("output")
+
+        const personality = {
+            name: "Olha",
+            last_name: "Plesowskich",
+            birthday: "02.12.1967"
+        }
+
+        personality.height = "170 cm";
+        personality.eye_color = "niebieski";
+        personality.birthday = "16.10.2000"; // Poprawiony format daty
+
+        console.log(personality);
+        console.log(`Imię: ${personality["name"]}`); // Użycie nawiasów kwadratowych
+        console.log(`Nazwisko: ${personality["last_name"]}`); // Użycie nawiasów kwadratowych
+        console.log(`Data urodzenia: ${personality["birthday"]}`); // Użycie nawiasów kwadratowych
+
+        out.innerHTML += (`Imię: ${personality["name"]}<br>`); // Użycie nawiasów kwadratowych
+        out.innerHTML += (`Nazwisko: ${personality["last_name"]}<br>`); // Użycie nawiasów kwadratowych
+        out.innerHTML += (`Data urodzenia: ${personality["birthday"]}<br>`); // Użycie nawiasów kwadratowych
+        out.innerHTML += (`Wzrost: ${personality.height}<br>`);
+        out.innerHTML += (`Kolor oczu: ${personality.eye_color}<br>`);
+        
+    </script>
+</body>
+</html>

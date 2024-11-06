@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const person = new Object({
+            name: "Kasia",
+            last_name : "Plesowskich",
+            birthdaj : "14.11.1978",
+            height : "170 cm",
+            eye_color : "niebieski",
+
+            adress: new Object({
+                street : "Glogowska",
+                nr_house : 54,
+                nr_float : 17,
+                post_code : "61-003",
+                locate : "Miasto"
+            })
+        })
+
+        
+
+        console.log(person);
+        
+        document.getElementById("output").innerHTML += `Person:<br>
+        imię: ${person.name}<br>
+        nazwisko: ${person.last_name}<br>
+        urodziny: ${person.birthdaj}<br>
+        wzrost: ${person.height}<br>
+        kolor oczu : ${person.eye_color}<br><br>
+        Adres:<br>
+        ulica : ${person.adress.street}<br>
+        nr domu : ${person.adress.nr_house}<br>
+        nr mieszkania : ${person.adress.nr_float}<br>
+        kod pocztowy : ${person.adress.post_code}<br>
+        miejscowość :${person.adress.locate}`;
+    </script>
+</body>
+</html>
