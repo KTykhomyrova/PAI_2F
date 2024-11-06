@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let out = document.getElementById("output")
+
+        function Person(name, last_name, heigh, weight){
+            this.name = name;
+            this.last_name = last_name;
+            this.heigh = heigh;
+            this.weight = weight;
+            this.toString = function()
+            {
+                return `Witaj ${this.name} ${this.last_name}!`;
+            }
+            this.information = function(){
+                return `<br>Imie i nazwisko : ${this.name} ${this.last_name}<br>Wzrost : ${this.heigh}<br>Waga : ${this.weight}`
+            }
+        }
+
+        let name1 = prompt("Podaj imię: ");
+        let last_name1 = prompt(`Podaj nazwisko: `);
+        let heigh1 = prompt(`Podaj wzrost: `);
+        let weight1 = prompt(`Podaj wagę: `);
+
+        const person1 = new Person(name1, last_name1, heigh1, weight1);
+        const person2 = new Person("Hilda", "Bondarenko", 170, 50);
+        const person3 = new Person("Lida", "Kilta", 150, 60);
+        out.innerHTML += person1;
+        out.innerHTML += person1.information() + `<br><br>` + person2.information() + `<br><br>` + person3.information(); 
+
+
+
+    </script>
+</body>
+</html>

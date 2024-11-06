@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        out = document.getElementById("output")
+        const person = new Object({
+            name: 0,
+            last_name: 0,
+            heigh: 0,
+            weight: 0,
+            greeting :function(){
+                return `Witaj ${person.name} ${person.last_name}<br>`
+            },
+
+            information :function(){
+                return `Imie i nazwisko: ${person.name} ${person.last_name}<br>Wzrost: ${person.heigh}<br>Waga: ${person.weight}`
+            }
+        })
+
+        person.name = prompt("Podaj imię: ");
+        person.last_name = prompt("Podaj nazwisko: ");
+        person.heigh = prompt("Podaj wzrost: ");
+        person.weight = prompt("Podaj wagę: ");
+
+        out.innerHTML += person.greeting();
+        out.innerHTML += person.information();
+    </script>
+</body>
+</html>
