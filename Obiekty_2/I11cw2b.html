@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        out = document.getElementById("output")
+        function Right_triangle(a, b){
+            this.a =a;
+            this.b =b;
+            this.hypotenuse = function(){
+                let c=Math.sqrt(this.a*this.a +this.b*this.b);
+                return c;
+            },
+            this.area = function(){
+                return (this.a * this.b)/2;
+            },
+            this.circuit = function(){
+                return (this.a + this.b + this.hypotenuse());
+            }
+        }
+
+        let a1 = parseInt(prompt("Podaj a: "));
+        let b1 = parseInt(prompt("Podaj b: "));
+
+        const triangle = new Right_triangle(a1, b1);
+
+        out.innerHTML += `Przeciwprostokątna: ${Math.round(triangle.hypotenuse())}`;
+        out.innerHTML += `<br>Pole:  ${Math.round(triangle.area())}`;
+        out.innerHTML += `<br>Obwód:  ${Math.round(triangle.circuit())}`;
+    </script>
+</body>
+</html>

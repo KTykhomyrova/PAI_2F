@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        out = document.getElementById("output")
+
+        const right_triangle = {
+            a: 0,
+            b: 0,
+            hypotenuse: function(){
+                let c=Math.sqrt(right_triangle.a*right_triangle.a +right_triangle.b*right_triangle.b);
+                return c;
+            },
+            area: function(){
+                return (right_triangle.a * right_triangle.b)/2;
+            },
+            circuit: function(){
+                return (right_triangle.a + right_triangle.b + right_triangle.hypotenuse());
+            }
+        }
+
+        right_triangle.a = parseInt(prompt("Podaj a: "));
+        right_triangle.b = parseInt(prompt("Podaj b: "));
+
+        out.innerHTML += `Przeciwprostokątna: ${Math.round(right_triangle.hypotenuse())}`;
+        out.innerHTML += `<br>Pole:  ${Math.round(right_triangle.area())}`;
+        out.innerHTML += `<br>Obwód:  ${Math.round(right_triangle.circuit())}`;
+    </script>
+</body>
+</html>

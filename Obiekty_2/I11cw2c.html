@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let out = document.getElementById("output")
+        class Right_triangle{
+            constructor(a, b){
+                this.a = a;
+                this.b = b;
+            }
+            hypotenuse(){
+                let c=Math.sqrt(this.a*this.a +this.b*this.b);
+                return c;
+            }
+            area(){
+                return (this.a * this.b)/2;
+            }
+            circuit(){
+                return (this.a + this.b + this.hypotenuse());
+            }
+        }
+
+        let a1 = parseInt(prompt("Podaj a: "));
+        let b1 = parseInt(prompt("Podaj b: "));
+
+        const triangle = new Right_triangle(a1, b1);
+        out.innerHTML += `Przeciwprostokątna: ${Math.round(triangle.hypotenuse())}`;
+        out.innerHTML += `<br>Pole:  ${Math.round(triangle.area())}`;
+        out.innerHTML += `<br>Obwód:  ${Math.round(triangle.circuit())}`;
+
+        let a2 = parseInt(prompt("Podaj a: "));
+        let b2 = parseInt(prompt("Podaj b: "));
+
+        const triangle2 = new Right_triangle(a2, b2);
+        out.innerHTML += `<br><br>Przeciwprostokątna: ${Math.round(triangle2.hypotenuse())}`;
+        out.innerHTML += `<br>Pole:  ${Math.round(triangle2.area())}`;
+        out.innerHTML += `<br>Obwód:  ${Math.round(triangle2.circuit())}`;
+
+        let a3 = parseInt(prompt("Podaj a: "));
+        let b3 = parseInt(prompt("Podaj b: "));
+
+        const triangle3 = new Right_triangle(a3, b3);
+        out.innerHTML += `<br><br>Przeciwprostokątna: ${Math.round(triangle3.hypotenuse())}`;
+        out.innerHTML += `<br>Pole:  ${Math.round(triangle3.area())}`;
+        out.innerHTML += `<br>Obwód:  ${Math.round(triangle3.circuit())}`;
+    </script>
+</body>
+</html>
