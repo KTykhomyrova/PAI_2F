@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        function Marks(mark) {
+            if (mark === "1" || mark === "2-" || mark === "2" || mark === "2+") {
+                return "sporo pracy przed Tobą";
+            } else if (mark === "3-") {
+                return "jeszcze trochę, a będzie ok.";
+            } else if (mark === "3" || mark === "3+" || mark === "4-" || mark === "4" || mark === "4+" || mark === "5-" || mark === "5" || mark === "5+" || mark === "6") {
+                return "okej";
+            } else {
+                return "Błąd";
+            }
+        }
+
+        const num = prompt("Podaj ocenę: ");
+
+        document.getElementById("output").innerHTML = Marks(num);
+    </script>
+</body>
+</html>

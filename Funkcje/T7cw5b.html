@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const Field = (a, b, h) => ((a + b) * h) / 2;
+
+        const a = parseInt(prompt("Podaj pierwszą długość:"));
+        const b = parseInt(prompt("Podaj drugą długość:"));
+        const h = parseInt(prompt("Podaj wysokość: "));
+
+        document.getElementById("output").innerHTML = "Pole trapezu: " + Field(a, b, h);
+    </script>
+</body>
+</html>

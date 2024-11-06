@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <p id="output"></p>
+    <script>
+        const Min = (num1, num2) => num1 < num2 ? num1 : num2 < num1 ? num2 : "Są równe";
+        
+        const Max = (num1, num2) => num1 > num2 ? num1 : num2 > num1 ? num2 : "Są równe";
+        
+        const Average = (num1, num2) => (num1 + num2) / 2;
+
+        const number1 = parseFloat(prompt("Podaj pierwszą liczbę:"));
+        const number2 = parseFloat(prompt("Podaj drugą liczbę:"));
+        const out = document.getElementById("output");
+
+        out.innerHTML += "Minimum: " + Min(number1, number2) + "<br>";
+        out.innerHTML += "Maksimum: " + Max(number1, number2) + "<br>";
+        out.innerHTML += "Średnia: " + Average(number1, number2);
+    </script>
+</body>
+</html>
