@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "output"></p>
+    <script>
+        var name = prompt("Podaj imię:");
+        var last_name = prompt("Podaj nazwisko:");
+        alert(`Witaj ${name} ${last_name}!`);
+        document.write(`Witaj ${name} ${last_name}!`);
+        document.getElementById("output").innerHTML = `Witaj ${name} ${last_name}!`;
+        console.log(`Witaj ${name} ${last_name}!`);
+
+    </script>
+    
+</body>
+</html>
