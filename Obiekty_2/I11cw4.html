@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let out = document.getElementById("output")
+
+        function school(teacher, subject, clas, student) {
+            this.teacher = teacher;
+            this.subject = subject;
+            this.clas = clas;
+            this.student = student;
+        }
+        function person(name, last_name, age) {
+            this.name = name;
+            this.last_name = last_name;
+            this.age = age;
+        }
+
+        let osoba1 = new person("Adam", "Nowak", 15);
+        let osoba2 = new person("Jan", "Kowalski", 35);
+        let ZSK = new school(osoba2, "Matematyka", "2F", osoba1);
+
+        out.innerHTML += `Nauczyciel ${ZSK.teacher.name} ${ZSK.teacher.last_name} uczy przedmiotu ${ZSK.subject}<br>Uczeń ${ZSK.student.name} ${ZSK.student.last_name} chodzi do klasy ${ZSK.clas}, której wychowawcą jest ${ZSK.teacher.name} ${ZSK.teacher.last_name}`;
+
+
+    </script>
+</body>
+</html>
