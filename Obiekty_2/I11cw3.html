@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        let out = document.getElementById("output")
+
+        class Circle{
+            constructor(r){
+                this.r = r;
+            }
+            area(){
+                return Math.PI * this.r * this.r
+            }
+            perimetr(){
+                return 2 * Math.PI * this.r
+            }
+        }
+
+        let circle1 = new Circle(parseInt(prompt("Podaj radius 1 kołą: ")));
+        let circle2 = new Circle(parseInt(prompt("Podaj radius 2 koła: ")));
+        let circle3 = new Circle(parseInt(prompt("Podaj radius 3 koła: ")));
+        let circle4 = new Circle(parseInt(prompt("Podaj radius 4 koła: ")));
+
+        out.innerHTML += `<b>Pierwsze koło:</b><br>Obwód: ${circle1.perimetr().toFixed(2)}<br>Pole: ${circle1.area().toFixed(2)}<br><br><b>Drugie koło:</b><br>Obwód: ${circle2.perimetr().toFixed(2)}<br>Pole: ${circle2.area().toFixed(2)}<br><br><b>Trzecie koło:</b><br>Obwód: ${circle3.perimetr().toFixed(2)}<br>Pole: ${circle3.area().toFixed(2)}<br><br><b>Czwarte koło:</b><br>Obwód: ${circle4.perimetr().toFixed(2)}<br>Pole: ${circle4.area().toFixed(2)}`;
+    </script>
+</body>
+</html>
