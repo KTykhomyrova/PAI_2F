@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T12cw9</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const dniTygodnia = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
+        const miesiace = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września", "października", "listopada", "grudnia"];
+
+        const dzisiaj = new Date();
+        const dzienTygodnia = dniTygodnia[dzisiaj.getDay()];
+        const dzienMiesiaca = dzisiaj.getDate();
+        const miesiac = miesiace[dzisiaj.getMonth()];
+
+        function liczbaDoSlownie(liczba) {
+            const liczbySlownie = [
+                "", "pierwszy", "drugi", "trzeci", "czwarty", "piąty", "szósty", "siódmy", "ósmy", "dziewiąty", 
+                "dziesiąty", "jedenasty", "dwunasty", "trzynasty", "czternasty", "piętnasty", "szesnasty", 
+                "siedemnasty", "osiemnasty", "dziewiętnasty", "dwudziesty", "dwudziesty pierwszy", 
+                "dwudziesty drugi", "dwudziesty trzeci", "dwudziesty czwarty", "dwudziesty piąty", 
+                "dwudziesty szósty", "dwudziesty siódmy", "dwudziesty ósmy", "dwudziesty dziewiąty", 
+                "trzydziesty", "trzydziesty pierwszy"
+            ];
+            return liczbySlownie[liczba];
+        }
+
+        const dzienSlownie = liczbaDoSlownie(dzienMiesiaca);
+        const wynik = `${dzienTygodnia} ${dzienSlownie} ${miesiac}`;
+        document.getElementById("output").textContent = wynik;
+        
+    </script>
+</body>
+</html>

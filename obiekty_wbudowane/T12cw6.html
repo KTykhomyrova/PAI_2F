@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otwórz okno</title>
+</head>
+<body>
+    <button onclick="openWindow()">Otwórz okno</button>
+    <script>
+        function openWindow() {
+            const newWindow = window.open(
+                "https://www.wp.pl",
+                "_",
+                `width=400,height=200,left=100,top=100`
+            );
+
+            
+            setTimeout(() => {
+                if (newWindow && !newWindow.closed) {
+                    newWindow.close();
+                }
+            }, 60000); 
+        }
+    </script>
+</body>
+</html>
