@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #002255;
+            color: #fff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="class1">Nadgłówek z klasą = "class1".</h2>
+    <h3 class="class2">Nadgłówek z klasą = "class2".</h3>
+    <p class="class1">Akapit z klasą = "class1".</p>
+    <p class="class1">Drugi akapit z klassą = "class1".</p>
+    <p class="class1">Akapit bez klasy z indentyfikatorem</p>
+    <ul>
+        <li>punkt pierwszy</li>
+        <li>punky drugi</li>
+        <li>punkt trzeci</li>
+        <li>punkt czwarty</li>
+    </ul>
+
+    <p><button onclick="MyFunction1()">Zmień kolor pierwszego akapitu z klasą = "class1"</button></p>
+    <p><button onclick="MyFunction2()">Zmień lolor tła i text z akapituz indentyfikatorem</button></p>
+    <p><button onclick="MyFunction3()">Zmień kolor tła 2 ostatnich punktów listy</button></p>
+    
+    <script>
+        let isChanged1 = false;  
+        let isChanged2 = false;
+        let isChanged3 = false; 
+
+        function MyFunction1() { 
+            let p = document.getElementsByClassName("class1");
+            if (!isChanged1) {
+                p[1].style.backgroundColor = "#a5aeb8";
+                isChanged1 = true; 
+            } else {
+                p[1].style.backgroundColor = "";
+                isChanged1 = false; 
+            }
+        }
+
+        function MyFunction2() {
+            let p = document.getElementsByClassName("class1");
+            if (!isChanged2) {
+                for (let i = 3; i <= 3; i++) {
+                    p[i].style.backgroundColor = "white";
+                    p[i].style.color = "black";
+                    p[i].innerHTML = "<b>Świetnie!!!</b>";
+                }
+                isChanged2 = true;
+            }
+            else{
+                for (let i = 3; i <= 3; i++){
+                    p[i].style.backgroundColor = "#002255";
+                    p[i].style.color = "white";
+                    p[i].innerHTML = "Akapit bez klasy z indentyfikatorem";
+                }
+                isChanged2 = false;
+            }
+            
+        }
+
+
+        function MyFunction3() {
+            let li = document.getElementsByTagName("li")
+            if (!isChanged3) {
+                for (let i = li.length - 1; i >= li.length - 2; i--) {
+                    li[i].style.backgroundColor = "purple";
+                }
+                isChanged3 = true;
+            }
+            else{
+                for (let i = li.length - 1; i >= li.length - 2; i--) {
+                    li[i].style.backgroundColor = "#002255";
+                }
+                isChanged3 = false;
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
