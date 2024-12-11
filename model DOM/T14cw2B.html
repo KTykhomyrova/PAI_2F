@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #F6F0F3;
+        }
+        a{
+            color: #B67493;
+        }
+        ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">jeden</a></li>
+        <li><a href="#">dwa</a></li>
+        <li><a href="#">trzy</a></li>
+        <li><a href="#">cztery</a></li>
+        <li><a href="#">pięć</a></li>
+    </ul>
+    <button onclick="Hide()">Ukryj menu</button>
+    <button onclick="Show()">Pokaż menu</button>
+
+    <script>
+        function Hide() {
+            let array = document.querySelectorAll("ul")
+            for (let index = 0; index < array.length; index++) {
+                array[index].style.display = "none"
+                
+            }
+        }
+
+        function Show() {
+            let array = document.querySelectorAll("ul")
+            for (let index = 0; index < array.length; index++) {
+                array[index].style.display = "block"
+                
+            }
+        }
+    </script>
+</body>
+</html>

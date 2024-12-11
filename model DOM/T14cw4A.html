@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="class1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla venenatis, eleifend ipsum eget, euismod sem. Nunc quis sagittis ipsum. Curabitur sollicitudin orci id eros elementum, ornare sodales dolor ultricies. Donec vitae arcu gravida.</p>
+    <p class="class2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla venenatis, eleifend ipsum eget, euismod sem. Nunc quis sagittis ipsum. Curabitur sollicitudin orci id eros elementum, ornare sodales dolor ultricies. Donec vitae arcu gravida.</p>
+    <p class="class1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla venenatis, eleifend ipsum eget, euismod sem. Nunc quis sagittis ipsum. Curabitur sollicitudin orci id eros elementum, ornare sodales dolor ultricies. Donec vitae arcu gravida.</p>
+    <p class="class2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla venenatis, eleifend ipsum eget, euismod sem. Nunc quis sagittis ipsum. Curabitur sollicitudin orci id eros elementum, ornare sodales dolor ultricies. Donec vitae arcu gravida.</p>
+    <p class="class1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nulla venenatis, eleifend ipsum eget, euismod sem. Nunc quis sagittis ipsum. Curabitur sollicitudin orci id eros elementum, ornare sodales dolor ultricies. Donec vitae arcu gravida.</p>
+
+    <button onclick="function1()">Formatuj parzyste</button>
+    <button onclick="function2()">Formatuj nieparzyste</button>
+    <button onclick="function3()">Formatuj 3 pierwsze</button>
+    <button onclick="function4()">Formatuj ostatni akapit</button>
+
+    <script>
+        let change1 = false;
+        let change2 = false;
+        let change3 = false;
+        let change4 = false;
+
+        function function1() {
+            let array = document.getElementsByClassName("class2")
+            
+                if (!change1) {
+                    for (let i = 0; i < array.length; i++) {
+                        array[i].style.backgroundColor = "black";
+                        array[i].style.color = "yellow";
+                        array[i].style.textAlign = "center";
+                        array[i].style.fontFamily = "Courier New, monospace";
+                    }
+                    change1 = true;
+                }
+                else{
+                    for (let i = 0; i < array.length; i++) {
+                    array[i].style.backgroundColor = "white";
+                    array[i].style.color = "black";
+                    array[i].style.textAlign = "";
+                    array[i].style.fontFamily = "";
+                    }
+                    change1 = false;
+                }
+            }
+
+            function function2() {
+            let array = document.getElementsByClassName("class1")
+            
+                if (!change2) {
+                    for (let i = 0; i < array.length; i++) {
+                        array[i].style.backgroundColor = "black";
+                        array[i].style.color = "yellow";
+                        array[i].style.textAlign = "center";
+                        array[i].style.fontFamily = "Courier New, monospace";
+                    }
+                    change2 = true;
+                }
+                else{
+                    for (let i = 0; i < array.length; i++) {
+                    array[i].style.backgroundColor = "white";
+                    array[i].style.color = "black";
+                    array[i].style.textAlign = "";
+                    array[i].style.fontFamily = "";
+                    }
+                    change2 = false;
+                }
+            }
+
+
+            function function3() {
+            let array = document.getElementsByTagName("p")
+            
+                if (!change3) {
+                    for (let i = 0; i <= 2; i++) {
+                        array[i].style.backgroundColor = "black";
+                        array[i].style.color = "yellow";
+                        array[i].style.textAlign = "center";
+                        array[i].style.fontFamily = "Courier New, monospace";
+                    }
+                    change3 = true;
+                }
+                else{
+                    for (let i = 0; i <= 2; i++) {
+                    array[i].style.backgroundColor = "white";
+                    array[i].style.color = "black";
+                    array[i].style.textAlign = "";
+                    array[i].style.fontFamily = "";
+                    }
+                    change3 = false;
+                }
+            }
+
+
+            function function3() {
+            let array = document.getElementsByTagName("p")
+            
+                if (!change3) {
+                    for (let i = 0; i <= 2; i++) {
+                        array[i].style.backgroundColor = "black";
+                        array[i].style.color = "yellow";
+                        array[i].style.textAlign = "center";
+                        array[i].style.fontFamily = "Courier New, monospace";
+                    }
+                    change3 = true;
+                }
+                else{
+                    for (let i = 0; i <= 2; i++) {
+                    array[i].style.backgroundColor = "white";
+                    array[i].style.color = "black";
+                    array[i].style.textAlign = "";
+                    array[i].style.fontFamily = "";
+                    }
+                    change3 = false;
+                }
+            }
+
+
+            function function4() {
+                let array = document.getElementsByTagName("p");
+                
+                if (!change4) {
+                
+                    let lastParagraph = array[array.length - 1];
+                    lastParagraph.style.textAlign = "center";
+                    lastParagraph.style.fontFamily = "Impact, fantasy";
+                    lastParagraph.style.letterSpacing = "3px";
+                    change4 = true;
+                } else {
+                    let lastParagraph = array[array.length - 1];
+                    lastParagraph.style.textAlign = "left";
+                    lastParagraph.style.fontFamily = "";
+                    lastParagraph.style.letterSpacing = "";
+                    change4 = false;
+                }
+            }
+
+        
+    </script>
+</body>
+</html>

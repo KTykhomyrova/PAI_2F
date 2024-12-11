@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: white;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="function1()" id="button1"></button>
+    <button onclick="function2()" id="button2"></button>
+    <button onclick="function3()" id="button3"></button>
+    <button onclick="function4()" id="button4"></button>
+    <button onclick="function5()" id="button5"></button>
+
+    <script>
+        let change1 = false;
+        let change2 = false;
+        let change3 = false;
+        let change4 = false;
+        let change5 = false;
+
+        function function1() {
+            let button = document.getElementById("button1")
+
+            if (!change1) {
+                button.style.backgroundColor = "red";
+                change1 = true;
+            }
+            else{
+                button.style.backgroundColor = "white";
+                change1 = false;
+            }
+        }
+
+        function function2() {
+            let button = document.getElementById("button2")
+
+            if (!change2) {
+                button.style.backgroundColor = "red";
+                change2 = true;
+            }
+            else{
+                button.style.backgroundColor = "white";
+                change2 = false;
+            }
+        }
+
+
+        function function3() {
+            let button = document.getElementById("button3")
+
+            if (!change3) {
+                document.getElementById("button3").style.backgroundColor = "red";
+                change3 = true;
+            }
+            else{
+                button.style.backgroundColor = "white";
+                change3 = false;
+            }
+        }
+
+        function function4() {
+            let button = document.getElementById("button4")
+
+            if (!change4) {
+                button.style.backgroundColor = "red";
+                change4 = true;
+            }
+            else{
+                button.style.backgroundColor = "white";
+                change4 = false;
+            }
+        }
+
+        function function5() {
+            let button = document.getElementById("button5")
+
+            if (!change5) {
+                button.style.backgroundColor = "red";
+                change5 = true;
+            }
+            else{
+                button.style.backgroundColor = "white";
+                change5 = false;
+            }
+        }
+    </script>
+</body>
+</html>

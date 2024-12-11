@@ -16,17 +16,17 @@
     <h2 class="class1">Nadgłówek z klasą = "class1".</h2>
     <h3 class="class2">Nadgłówek z klasą = "class2".</h3>
     <p class="class1">Akapit z klasą = "class1".</p>
-    <p class="class1">Drugi akapit z klassą = "class1".</p>
-    <p id="id1">Akapit bez klasy z indentyfikatorem</p>
+    <p class="class1">Drugi akapit z klasą = "class1".</p>
+    <p id="id1">Akapit bez klasy z identyfikatorem</p>
     <ul>
         <li>punkt pierwszy</li>
-        <li>punky drugi</li>
+        <li>punkt drugi</li>
         <li>punkt trzeci</li>
         <li>punkt czwarty</li>
     </ul>
 
     <p><button onclick="MyFunction1()">Zmień kolor pierwszego akapitu z klasą = "class1"</button></p>
-    <p><button onclick="MyFunction2()">Zmień lolor tła i text z akapituz indentyfikatorem</button></p>
+    <p><button onclick="MyFunction2()">Zmień kolor tła i tekstu w akapicie z identyfikatorem</button></p>
     <p><button onclick="MyFunction3()">Zmień kolor tła 2 ostatnich punktów listy</button></p>
     
     <script>
@@ -38,7 +38,7 @@
             if (!isChanged1) {
                 document.querySelector("p.class1").style.backgroundColor = "#a5aeb8";
                 isChanged1 = true;
-            }else{
+            } else {
                 document.querySelector("p.class1").style.backgroundColor = "#002255";
                 isChanged1 = false;
             }
@@ -50,10 +50,10 @@
                 document.querySelector("#id1").style.color = "black";
                 document.querySelector("#id1").innerHTML = "<b>Świetnie!!!</b>";
                 isChanged2 = true;
-            }else{
+            } else {
                 document.querySelector("#id1").style.backgroundColor = "#002255";
                 document.querySelector("#id1").style.color = "white";
-                document.querySelector("#id1").innerHTML = "Akapit bez klasy z indentyfikatorem";
+                document.querySelector("#id1").innerHTML = "Akapit bez klasy z identyfikatorem";
                 isChanged2 = false;
             }
         }
@@ -65,12 +65,12 @@
                     listy[i].style.backgroundColor = "purple";
                 }
                 isChanged3 = true;
-            }else{
+            } else {
                 for (let i = listy.length - 1; i >= listy.length - 2; i--) {
                     listy[i].style.backgroundColor = "#002255";
                 }
+                isChanged3 = false; 
             }
-            isChanged3 = false;
         }
 
     </script>
