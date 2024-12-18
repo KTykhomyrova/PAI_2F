@@ -38,73 +38,66 @@
     <button onclick="formatLast()">Formatuj ostatni akapit</button>
 
     <script>
-        let change1 = false;
-        let change2 = false;
-        let change3 = false;
-        let change4 = false; 
+        let changeEven = false;
+        let changeOdd = false;
+        let changeFirstThree = false;
+        let changeLast = false; 
 
         function formatEven() {
             const array = document.querySelectorAll('.class2');
-            if (!change1) {
-                    for (let i = 0; i < array.length; i++) {
-                        array[i].classList.toggle('formatted');
-                    }
-                    change1 = true;
+            if (!changeEven) {
+                for (let i = 0; i < array.length; i++) {
+                    array[i].classList.toggle('formatted');
                 }
-                else{
-                    for (let i = 0; i < array.length; i++) {
+                changeEven = true;
+            } else {
+                for (let i = 0; i < array.length; i++) {
                     array[i].classList.toggle('default');
-                    }
-                    change1 = false;
                 }
+                changeEven = false;
             }
-               
-        
+        }
+
         function formatOdd() {
             const array = document.querySelectorAll('.class1');
-            if (!change1) {
-                    for (let i = 0; i < array.length; i++) {
-                        array[i].classList.toggle('formatted');
-                    }
-                    change1 = true;
+            if (!changeOdd) {
+                for (let i = 0; i < array.length; i++) {
+                    array[i].classList.toggle('formatted');
                 }
-                else{
-                    for (let i = 0; i < array.length; i++) {
+                changeOdd = true;
+            } else {
+                for (let i = 0; i < array.length; i++) {
                     array[i].classList.toggle('default');
-                    }
-                    change1 = false;
                 }
+                changeOdd = false;
+            }
         }
 
         function formatFirstThree() {
             const array = document.querySelectorAll('p');
-            if (!change3) {
-                    for (let i = 0; i <= 2; i++) {
-                        array[i].classList.toggle('formatted');
-                    }
-                    change3 = true;
+            if (!changeFirstThree) {
+                for (let i = 0; i <= 2; i++) {
+                    array[i].classList.toggle('formatted');
                 }
-                else{
-                    for (let i = 0; i <= 2; i++) {
-                        array[i].classList.toggle('default');
-                    }
-                    change3 = false;
+                changeFirstThree = true;
+            } else {
+                for (let i = 0; i <= 2; i++) {
+                    array[i].classList.toggle('default');
                 }
+                changeFirstThree = false;
+            }
         }
 
         function formatLast() {
             const array = document.querySelectorAll('p');
-
-            if (!change4) {
-                
-                array[array.length - 1].toggle('printed');
-                change4 = true;
+            if (!changeLast) {
+                array[array.length - 1].classList.toggle('printed');
+                changeLast = true;
             } else {
-                lrray[array.length - 1].classList.toggle('default');
-                change4 = false;
+                array[array.length - 1].classList.toggle('default');
+                changeLast = false;
             }
         }
-            
     </script>
 </body>
 </html>

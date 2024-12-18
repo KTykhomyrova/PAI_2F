@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #498e8b;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+            margin: 20px 0;
+            background-color: #6bc3bb;
+            border: 2px solid black;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <a class="class" href="#">Link 1</a>
+    <a class="class" href="#">Link 2</a>
+    <a class="class" href="#">Link 3</a>
+
+    <button onclick="Function1()">Zmień położenie</button>
+    <button onclick="Function2()">Zmień kolor</button>
+
+    <script>
+        let choice1 = false; 
+        let choice2 = false; 
+
+        let a = document.getElementsByTagName("a"); 
+
+        function Function1() {
+            if (!choice1) {
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.flexDirection = "column"; 
+                }
+                choice1 = true; 
+            } else {
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.flexDirection = "row"; 
+                    a[i].style.justifyContent = "space-between";
+                }
+                choice1 = false; 
+            }
+        }
+
+        function Function2() {
+            if (!choice2) {
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.backgroundColor = "#52e895"; 
+                }
+                choice2 = true; 
+            } else {
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.backgroundColor = "#6bc3bb"; 
+                }
+                choice2 = false; 
+            }
+        }
+    </script>
+</body>
+</html>

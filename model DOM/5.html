@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #498e8b;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+            margin: 10px 0;
+            background-color: #6bc3bb;
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+    
+
+    <button onclick="changePosition()">Zmień położenie</button>
+    <button onclick="changeColor()">Zmień kolor</button>
+
+    <script>
+        let isHorizontal = false; 
+        let isColorChanged = false; 
+
+        const links = document.querySelectorAll("a"); 
+
+        function changePosition() {
+            const container = document.body; // Używamy body jako kontenera dla linków
+
+            if (isHorizontal) {
+                container.style.flexDirection = "column"; // Zmiana na układ pionowy
+                isHorizontal = false; 
+            } else {
+                container.style.flexDirection = "row"; // Zmiana na układ poziomy
+                container.style.justifyContent = "space-between"; // Równomierne rozmieszczenie
+                isHorizontal = true; 
+            }
+        }
+
+        function changeColor() {
+            if (isColorChanged) {
+                // Przywracanie pierwotnego koloru
+                links.forEach(link => {
+                    link.style.backgroundColor = "#6bc3bb";
+                });
+                isColorChanged = false; 
+            } else {
+                // Zmiana koloru tła
+                links.forEach(link => {
+                    link.style.backgroundColor = "#52e895";
+                });
+                isColorChanged = true; 
+            }
+        }
+    </script>
+</body>
+</html>
