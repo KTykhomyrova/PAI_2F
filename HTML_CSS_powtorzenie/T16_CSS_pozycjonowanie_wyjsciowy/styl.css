@@ -1,0 +1,58 @@
+body{
+    background: #197c86;
+}
+nav, section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-bottom: 2px solid #fff;
+    height: 70vh;
+}
+section{
+    position: relative;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    background: #fff;
+}
+.rel{
+    background-color: #242bae;
+    position: relative;
+    bottom: -80px;
+    left: -150px;
+}
+.absolute{
+    background-color: rgb(238, 255, 0);
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin: 0;
+}
+.absolute2{
+    background-color: rgba(163, 20, 20, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+	height: 100%;
+	width: 100%;
+	/*z-index: -1;*/
+}
+.fixed{
+    background-color: #164a58;
+	position: fixed;
+	top: 20px;
+	right: 30px;
+}
+.special{
+    background-color: #458bc3;
+	position: sticky;
+	top: -1px;
+}

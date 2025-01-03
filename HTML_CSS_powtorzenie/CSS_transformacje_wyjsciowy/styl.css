@@ -1,0 +1,39 @@
+body{
+	background: #197c86;
+}
+section{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	border-bottom: 2px solid #fff;
+	height: 35vh;
+}
+.box{
+	height: 100px;
+	width: 100px;
+	margin: 20px;
+	background: #fff;
+}
+.heart{
+	background: #f00;
+	margin: 50px;
+	height: 80px;
+	width: 80px;
+	position: relative;
+}
+.trans:hover{
+	background: red;
+	/*transition: background 1s linear;*/
+}
+.trans{
+	transition: background 1s linear;
+}
+.t1{
+	transform: translateY(20px);
+	transition: background 1s linear, transform 2s;
+
+}
+
+
+
+
