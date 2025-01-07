@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class{
+            background-color: rgb(255, 209, 251);
+            color: rgb(167, 222, 248);
+            height: 500px;
+            width: 500px;
+        }
+
+        img{
+            height: 400px;
+            width: 600px;
+        }
+
+        .class1{
+            
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <img src="https://mazury.travel/rowery/wp-content/uploads/2022/03/Rezerwat-przyrody-Jezioro-Orlowo-Male-25-UMWWM.jpg">
+    <br>
+    <a href="https://www.google.pl/?hl=pl"></a>
+
+    <button onclick="Fun1()">Zmień div</button>
+    <button onclick="Fun2()">Zmień zdjęcie</button>
+    <button onclick="Fun3()">Zmień link</button>
+
+    <script>
+        var choose1 = false;
+        var choose2 = false;
+        var choose3 = false;
+
+        function Fun1() {
+            const div = document.querySelector("div");
+            if (!choose1) {
+                div.setAttribute("class", "class");
+                div.textContent = "Nowy tekst";
+
+                choose1 = true;
+            }else{
+                div.setAttribute("class", "class1");
+                div.textContent = "";
+
+                choose1 = false;
+            }
+        }
+    </script>
+</body>
+</html>
