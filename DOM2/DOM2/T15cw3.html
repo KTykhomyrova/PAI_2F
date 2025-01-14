@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Galeria</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e2b5b5;
+        }
+
+        .gallery {
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            border: 3px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button.active {
+            background-color: #e99fb5;
+            border: solid 2px;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img id="image" src="https://via.placeholder.com/300x200?text=Obrazek+1" alt="Obrazek 1">
+        <div class="description" id="description">Opis obrazka 1</div><br>
+        <button id="btn1" onclick="changeImage(0)">1</button>
+        <button id="btn2" onclick="changeImage(1)">2</button>
+        <button id="btn3" onclick="changeImage(2)">3</button>
+        <button id="btn4" onclick="changeImage(3)">4</button>
+    </div>
+
+    <script>
+        const images = [
+            { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlhCFF31WBNsZBVvVmoin-mZSgqMjRcrwhAqLMMTJfXIlv7b5yIBIsdb4SiEXP6I6aBYw&usqp=CAU', desc: 'Opis obrazka 1' },
+            { src: 'https://niezlasztuka.net/wp-content/uploads/2016/04/3Ophelia-by-John-Everett-Millais-1852.jpg', desc: 'Opis obrazka 2' },
+            { src: 'https://www.meisterdrucke.pl/kunstwerke/1260px/Gordon_Frederick_Browne_-_A_scene_from_William_Shakespeares_play_Hamlet_Act_V_Scene_1_Hamlet_I_know_him_Ho_-_%28MeisterDrucke-368279%29.jpg', desc: 'Opis obrazka 3' },
+            { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT404bNA3PtxMF5xFSHxMuQYMglO7mEPcyLUvxJonRYCKrrywvBg9RozoxcaZihPWBo4tM&usqp=CAU', desc: 'Opis obrazka 4' }
+        ];
+
+        let activeButton = null;
+
+        function changeImage(index) {
+            
+            const img = document.getElementById('image');
+            const description = document.getElementById('description');
+            img.src = images[index].src;
+            description.textContent = images[index].desc;
+
+            
+            if (activeButton !== null) {
+                activeButton.classList.remove('active');
+            }
+            activeButton = document.getElementById(`btn${index + 1}`);
+            activeButton.classList.add('active');
+        }
+    </script>
+</body>
+</html>
