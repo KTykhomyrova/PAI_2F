@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(255, 245, 245);
+        }
+
+        div{
+            border: solid black 1px;
+            padding: 50px;
+            width: 400px;
+        }
+
+        .img1{
+            border: solid red 1px;
+            height: 316px;
+            width: 320px;
+        }
+
+        .img2{
+            border: solid greenyellow 1px;
+            height: 316px;
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://image.ceneostatic.pl/data/products/90001845/318266f5-73f9-444e-9d92-ab627ee5133d_p-stroj-emotikon-luzak-emoji-emotka-8-10lat.jpg" alt="emotka1">
+    </div><br>
+    <button onclick="Fun1()" class = "but1">Kliknij mnie</button>
+    <button onclick="Fun2()" class = "but2">Kliknij mnie też</button>
+
+    <script>
+        let choose1 = false;
+        let choose2 = false;
+
+        function Fun1() {
+            const img = document.querySelector("img");
+            const but1 = document.querySelector("button.but1");
+            if (!choose1) {
+                img.src = "https://static.wikia.nocookie.net/emoji/images/7/7f/Boredemoji.jpg/revision/latest?cb=20190730185740&path-prefix=pl";
+                img.alt = "emotka2";
+                img.setAttribute("class", "img1");
+
+                but1.innerHTML = "<span>Nie klikaj mnie!</span>";
+
+                choose1 = true;
+            }else{
+                img.src = "https://image.ceneostatic.pl/data/products/90001845/318266f5-73f9-444e-9d92-ab627ee5133d_p-stroj-emotikon-luzak-emoji-emotka-8-10lat.jpg";
+                img.alt = "emotka1";
+                img.setAttribute("class", "");
+
+                but1.innerHTML = "<span>Kliknij mnie</span>";
+
+                choose1 = false;
+            }
+        }
+
+        function Fun2() {
+            const img = document.querySelector("img");
+            const but1 = document.querySelector("button.but2");
+            if (!choose2) {
+                img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeRbj36tHTvs02jEIU6cyM5cfZq4fJSPT_o_uQIsN3irs_qiDqdBG5CXY&s";
+                img.alt = "emotka3";
+                img.setAttribute("class", "img2");
+
+                but1.innerHTML = "<span>Ups</span>";
+
+                choose2 = true;
+            }else{
+                img.src = "https://image.ceneostatic.pl/data/products/90001845/318266f5-73f9-444e-9d92-ab627ee5133d_p-stroj-emotikon-luzak-emoji-emotka-8-10lat.jpg";
+                img.alt = "emotka1";
+                img.setAttribute("class", "");
+
+                but1.innerHTML = "<span>Kliknij mnie</span>";
+
+                choose2 = false;
+            }
+        }
+    </script>
+</body>
+</html>

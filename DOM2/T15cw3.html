@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Galeria</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F2C094;
+        }
+
+        .gallery {
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            border: 3px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button.active {
+            background-color: #BF755A;
+            border: solid 2px;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img id="image" src="https://www.thenation.com/wp-content/uploads/2015/05/shakespeare_cc_img.jpg" alt="Obrazek 1">
+        <div class="description" id="description">Galeria Williama Szekspira</div><br>
+        <button id="btn1" onclick="changeImage(0)">1</button>
+        <button id="btn2" onclick="changeImage(1)">2</button>
+        <button id="btn3" onclick="changeImage(2)">3</button>
+        <button id="btn4" onclick="changeImage(3)">4</button>
+    </div>
+
+    <script>
+        const images = [
+            { src: 'https://media.istockphoto.com/id/180737420/pl/wektor/antyczne-ilustracja-przedstawiaj%C4%85ca-przysi%C3%B3%C5%82ek-play.jpg?s=612x612&w=0&k=20&c=oiQSOUoQ-aQ8-omR3HCsNdEgwtPRlvtiU1wxYuz2S8U=', desc: 'Hamlet' },
+            { src: 'https://teatr-pismo.pl/wp-content/uploads/2021/01/12ae4b4d9a5a086b179213b653ff47fd4486d81c_2683.jpg', desc: 'A man in bed' },
+            { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT404bNA3PtxMF5xFSHxMuQYMglO7mEPcyLUvxJonRYCKrrywvBg9RozoxcaZihPWBo4tM&usqp=CAU', desc: 'Scena ze sztuki Williama Szekspira' },
+            { src: 'https://www.meisterdrucke.pl/kunstwerke/1260px/Edouard_Jean_Conrad_Hamman_-_Shakespeare_with_his_Family_at_Stratford_Reciting_the_Tragedy_Hamlet_%28stipple_en_-_%28MeisterDrucke-59841%29.jpg', desc: 'Szekspir z rodziną, w Stratford' }
+        ];
+
+        let activeButton = null;
+
+        function changeImage(index) {
+            
+            const img = document.getElementById('image');
+            const description = document.getElementById('description');
+            img.src = images[index].src;
+            description.textContent = images[index].desc;
+
+            
+            if (activeButton !== null) {
+                activeButton.classList.remove('active');
+            }
+            activeButton = document.getElementById(`btn${index + 1}`);
+            activeButton.classList.add('active');
+        }
+    </script>
+</body>
+</html>

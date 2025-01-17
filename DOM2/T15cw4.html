@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+        }
+
+        div{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="Fun()">Włącz światło</button>
+    <h1>Ciemno</h1>
+
+    <div>
+        <img id="image" src="https://img.pikbest.com/wp/202405/light-illumination-black-background-illuminated-by-3d-rendered-bulb_9837017.jpg!w700wp" alt="żarówka">
+    </div>
+
+    <script>
+        let choose = false;
+        function Fun() {
+            const img = document.querySelector('img');
+            const but = document.querySelector("button");
+            const body = document.querySelector("body");
+            const h1 = document.querySelector("h1");
+            if (!choose) {
+                img.src = "https://girlandowo.pl/wp-content/uploads/2022/05/zarowka-dekoracyjna-led-350x350.jpg";
+                body.style.backgroundColor = "white"
+                but.innerHTML = "<span>Wyłącz światło</span>";
+                h1.textContent = "Stała się jastość";
+                body.style.color = "blue";
+                choose = true;
+            }else{
+                img.src = "https://img.pikbest.com/wp/202405/light-illumination-black-background-illuminated-by-3d-rendered-bulb_9837017.jpg!w700wp";
+                body.style.backgroundColor = "black"
+                but.innerHTML = "<span>Włącz światło</span>";
+                h1.textContent = "Ciemno";
+                body.style.color = "aliceblue";
+                choose = false;
+            }
+        }
+    </script>
+</body>
+</html>
