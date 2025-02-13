@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie Linków</title>
+    <style>
+        body {
+            background-color: #002255;
+            color: #fff;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .horizontal {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .menu a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            height: 50px;
+            background-color: #4CAF50;
+            border: 2px solid #fff;
+            color: white;
+        }
+        .color-change a {
+            background-color: #FF5733;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" id="menu">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+    <button onclick="F1()">Zmień położenie</button>
+    <button onclick="F2()">Zmień kolor</button>
+    
+    <script>
+        function F1() {
+            let menu = document.querySelector("#menu");
+            menu.classList.toggle("horizontal");
+        }
+
+        function F2() {
+            let menu = document.querySelector("#menu");
+            menu.classList.toggle("color-change");
+        }
+    </script>
+</body>
+</html>
