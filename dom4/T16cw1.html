@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        a{
+            display: block;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button onclick="Fun1()">button</button>
+
+    <script>
+        function Fun1() {
+            let div = document.querySelector("div");
+            let text = document.createElement("h1");
+            let text2 = "Polecanr strony";
+            text.textContent = text2;
+            div.appendChild(text);
+
+
+            let a1 = document.createElement("a");
+            let link1 = "https://www.google.com/search?q=r%C3%B3%C5%BCa&oq=r%C3%B3%C5%BCa&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEAgBEC4YgwEY1AIYsQMYgAQyCggCEC4YsQMYgAQyCggDEAAYsQMYgAQyEAgEEC4YrwEYxwEYgAQYmAUyCggFEAAYsQMYgAQyBwgGEC4YgAQyBwgHEAAYjwIyBwgIEAAYjwIyBwgJEAAYjwLSAQgyNjA2ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8";
+            a1.href = link1;
+            a1.textContent = "Link 1";
+            div.appendChild(a1);
+
+            let a2 = document.createElement("a");
+            let link2 = "https://www.google.com/search?q=r%C3%B3%C5%BCa&oq=r%C3%B3%C5%BCa&gs_lcrp=EgZjaHJvbWUqEAgAEAAYgwEY4wIYsQMYgAQyEAgAEAAYgwEY4wIYsQMYgAQyEAgBEC4YgwEY1AIYsQMYgAQyCggCEC4YsQMYgAQyCggDEAAYsQMYgAQyEAgEEC4YrwEYxwEYgAQYmAUyCggFEAAYsQMYgAQyBwgGEC4YgAQyBwgHEAAYjwIyBwgIEAAYjwIyBwgJEAAYjwLSAQgyNjA2ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8";
+            a2.href = link2;
+            a2.textContent = "Link 2";
+            div.appendChild(a2);
+
+            let img = document.createElement("img");
+            let image = "https://i.pinimg.com/736x/0a/83/3d/0a833dd26e9cbc92b92815c25afd3dc2.jpg";
+            img.src = image;
+            /*img.classList.add = "class";*/
+            div.appendChild(img);
+
+        }
+    </script>
+</body>
+</html>
