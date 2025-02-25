@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        header{
+            background-color: rgb(17, 78, 132);
+            border-radius: 10px;
+            text-align: center;
+            height: 120px;
+            display: block;
+            padding: 20px;
+        }
+        h1{
+            margin: 0;
+            color: white;
+            padding: 10px;
+
+        }
+        input{
+            border-radius: 5px;
+            width: 300px;
+        }
+        li{
+            background-color: rgb(209, 209, 209);
+            border-radius: 5px;
+            width: 97%;
+           
+        }
+        ul{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LISTA ZADAŃ:</h1><br>
+        <input type="text" id="text" placeholder="Wpisz tekst do zadania...">
+        <button onclick="Fun1()">DODAJ</button>
+
+    </header>
+    <ul id="ul"></ul>
+    <script>
+        function Fun1() {
+            let text = document.querySelector("#text");
+            let ul = document.querySelector("#ul");
+            let li = document.createElement("li");
+            let div = document.createElement("div");
+            let but = document.createElement("button");
+
+            li.textContent = text.value;
+            ul.appendChild(li);
+            text.value = "";
+
+
+            li.appendChild(div);
+            div.appendChild(but);
+        }
+
+
+
+        const delTask = (e) => {
+            let el = e.target.closet("li");
+            el.parentNode.removeChild(el);
+        }
+    </script>
+
+    
+</body>
+</html>
