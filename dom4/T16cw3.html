@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h2>Tabliczka mnożenia</h2>
+
+    <p>Podaj liczbę początkową:</p>
+    <input type="number" id="start">
+    <br>
+    <p>Podaj liczbę końcową:</p>
+    <input type="number" id="end">
+    <br>
+    <button onclick="Fun1()">Utwórz</button>
+
+    <p class="error" id="message"></p>
+
+    <div id="table"></div>
+
+    <script>
+        function Fun1() {
+            let start = parseInt(document.getElementById("start").value);
+            let end = parseInt(document.getElementById("end").value);
+            let message = document.getElementById("message");
+            let tableContainer = document.getElementById("table");
+
+            message.textContent = "";
+            tableContainer.innerHTML = "";
+
+            if (isNaN(start) || isNaN(end)) {
+                message.textContent = "Proszę podać poprawne liczby";
+                return;
+            }
+            if (start > end) {
+                message.textContent = "Liczba początkowa nie może być większa od końcowej";
+                return;
+            }
+            if (start < 1 || end > 100) {
+                message.textContent = "Zakres liczb powinien wynosić od 1 do 100";
+                return;
+            }
+
+            let table = document.createElement("table");
+            let headerRow = document.createElement("tr");
+            let emptyHeader = document.createElement("th");
+            emptyHeader.textContent = " ";
+            headerRow.appendChild(emptyHeader);
+
+            for (let i = start; i <= end; i++) {
+                let cell = document.createElement("th");
+                cell.textContent = i;
+                headerRow.appendChild(cell);
+            }
+            table.appendChild(headerRow);
+
+            for (let i = start; i <= end; i++) {
+                let row = document.createElement("tr");
+                let rowHeader = document.createElement("th");
+                rowHeader.textContent = i;
+                row.appendChild(rowHeader);
+
+                for (let j = start; j <= end; j++) {
+                    let cell = document.createElement("td");
+                    cell.textContent = i * j;
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+
+            tableContainer.appendChild(table);
+        }
+    </script>
+
+</body>
+</html>
