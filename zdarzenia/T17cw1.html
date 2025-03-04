@@ -1,50 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: rgb(247, 234, 240);
-        }
-        .div1{
-            margin-top: 20px;
             text-align: center;
-            
         }
-        .images{
+
+        #div1 {
+            margin-top: 20px;
+            height: 400px;
+        }
+
+        .images {
             height: 70px;
+            cursor: pointer;
+            margin: 5px;
         }
-        .div2{
+
+        .images:hover {
+            border-bottom: 3px solid red;
+        }
+
+        .div2 {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        #largeImage {
+            height: 422px;
+            width: 600px;
+            margin-bottom: 20px;
+             
+        }
+
+        .images.selected {
+            border-bottom: 3px solid rgb(114, 47, 73);
         }
     </style>
 </head>
 <body>
     <div id="div1">
         <h1>Galeria obrazków z miniaturkami</h1><br>
-        <img src="https://pieknetapety.pl/img/products/47/30/4/1.jpg" alt="">
+        <img id="largeImage" src="https://pieknetapety.pl/img/products/47/30/4/1.jpg" alt="">
         <div id="div2">
             <img class="images" src="https://www.919g.co.jp/blog/wp-content/uploads/magnolia-2652281_1920-e1582158937111.jpg" alt="">
             <img class="images" src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_670,h_445/https://img01.jalannews.jp/img/2021/07/20210720_hasunohana_019.jpg" alt="">
-            <img class="images" src="https://www.nerimakanko.jp/img_data/P000002746/P000002746.jpg" alt="">            
+            <img class="images" src="https://www.nerimakanko.jp/img_data/P000002746/P000002746.jpg" alt="">
             <img class="images" src="https://stat.ameba.jp/user_images/20240505/17/hanamizuki2996/d7/7c/j/o1024068215434772572.jpg" alt="">
-
         </div>
-
     </div>
 
     <script>
-        /*https://btth.pl/kwiaty-w-japonii-kalendarz-kwitnienia-kwiatow-sezonowych/*/
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll(".images");
+            const largeImage = document.querySelector("#largeImage");
+
+            images.forEach(function(image) {
+                image.addEventListener("mouseover", function() {
+                    largeImage.src = image.src;
+
+                    image.classList.add("selected");
+                });
+
+                image.addEventListener("mouseout", function() {
+                    image.classList.remove("selected");
+                });
+            });
+        });
     </script>
 </body>
 </html>
-
-
-

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+
+        #box {
+            width: 255px;
+            height: 255px;
+            background-color: rgb(212, 212, 212);
+            position: relative;
+        }
+
+        #info {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .rgb-values {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <div id="info">Pozycja myszy: X: 0, Y: 0</div>
+        <div class="rgb-values">RGB: (0, 0, 0)</div>
+    </div>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const box = document.getElementById('box');
+            const info = document.getElementById('info');
+            const rgbValues = document.querySelector('.rgb-values');
+
+            box.addEventListener('mousemove', function (event) {
+                const boxWidth = box.offsetWidth;
+                const boxHeight = box.offsetHeight;
+
+                const mouseX = event.offsetX;
+                const mouseY = event.offsetY;
+
+                const R = mouseX;
+                const G = mouseY;
+                const B = Math.round((R + G) / 2);
+
+                document.body.style.backgroundColor = `rgb(${R}, ${G}, ${B})`;
+
+                info.textContent = `Pozycja myszy: X: ${mouseX}, Y: ${mouseY}`;
+
+                rgbValues.textContent = `RGB: (${R}, ${G}, ${B})`;
+            });
+        });
+    </script>
+
+</body>
+</html>
