@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Comic Sans MS, Comic Sans, cursive;
+            background-color: rgb(232, 246, 252);
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Kalkulator</legend>
+            <label>a:
+            <input type="text" name="numA" value="">
+            </label>
+            <label>b:
+            <input type="text" nume="numB" value="">
+            </label><br>
+            <select name="sign" id="">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="button" value="wynik">
+        </fieldset>
+        <p id="output"></p>
+    </form>
+
+    <script>
+        let option = document.querySelector("select[name='sign']");
+        let button = document.querySelector("input[type='button']");
+        let output = document.querySelector("#output");
+        let input = document.querySelectorAll("input[type='text']");
+
+        button.addEventListener("click", () => {
+            let a = parseFloat(input[0].value);
+            let b = parseFloat(input[1].value);
+            let valueS = option.value; 
+
+            if (isNaN(a) || isNaN(b)) {
+                output.textContent = "Proszę wprowadzić poprawne liczby.";
+                return;
+            }
+
+            switch (valueS) {
+                case "+":
+                    output.textContent = `${a} + ${b} = ${a + b}`;
+                    break;
+                case "-":
+                    output.textContent = `${a} - ${b} = ${a - b}`;
+                    break;
+                case "/":
+                    if (b === 0) {
+                        output.textContent = "Nie można dzielić przez 0";
+                    } else {
+                        output.textContent = `${a} / ${b} = ${a / b}`;
+                    }
+                    break;
+                case "*":
+                    output.textContent = `${a} * ${b} = ${a * b}`;
+                    break;
+                default:
+                    output.textContent = "Proszę wybrać operację.";
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
