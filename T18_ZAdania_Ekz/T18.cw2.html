@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            justify-content: center;
+            background-color: rgb(118, 173, 136);
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Oblicz koszt dostawy</b></h1>
+    <form action="">
+        <input type="checkbox" name="check">
+        <label for="check">Jestem z Zielonej Góry</label><br>
+        <p>albo</p>
+        <label>
+            Podaj liczbę kilometrów od Zielonej Góry
+            <input type="number" value="num" ><br>
+            <input type="button" value="Oblicz">
+        </label>
+    </form>
+    <p id = "p"></p>
+
+    <script>
+        let button = document.querySelector("input[type='button']");
+        let output = document.querySelector("#p");
+        button.addEventListener("click", ()=>{
+            let box = document.querySelector("input[type='checkbox']").checked;
+            let num = document.querySelector("input[type='number']");
+            
+          
+            if (box == true) {
+                output.textContent = "Dowieziemy Twoją pizzę za darmo";
+            } else if (num.value > 0) {
+                output.textContent = `Dowóz będzie Cię kosztował ${num.value * 2} złotych`;
+            } 
+            else {
+                output.textContent = "Proszę podać prawidłowe dane.";
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -34,5 +34,36 @@
         <br><br>
         <input type="button" value="PRZELICZ" id="but">
     </form>
+    <p id="p"></p>
+
+    <script>
+        let num = document.querySelector("input[type='number']");
+        let radio = document.querySelectorAll("input[type='radio']");
+        let button = document.querySelector("input[type='button']");
+        let output = document.querySelector("#p");
+
+        button.addEventListener("click", ()=>{
+            let valueR;
+            
+            
+            for (let i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {
+                    valueR = radio[i].value;
+                }
+            }
+            
+           
+            switch (valueR) {
+                case "20x20":
+                    output.textContent = `Koszt kafelowania: ${num.value *70} zł`;
+                    break;
+                case "25x12":
+                    output.textContent = `Koszt kafelowania: ${num.value *80} zł`;
+                    break;
+                default:
+                    break;
+            }
+        });
+    </script>
 </body>
 </html>
