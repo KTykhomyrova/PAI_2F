@@ -1,0 +1,46 @@
+body{
+    font-family: Georgia;
+}
+
+aside:first-child {
+    background-color:Maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+}
+
+aside:last-child {
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow-y: auto;
+
+}
+footer{
+    background-color: DimGray;
+    color: white;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+#p_footer{
+    margin: 0;
+}
+p{
+    padding: 10px;
+}
+img{
+    padding: 10px;
+    border: 1px solid white;
+}
+#indigo{
+    background-color: indigo;
+}
+#steelBlue{
+    background-color: steelBlue;
+}
+#slive{
+    background-color: olive;
+}
