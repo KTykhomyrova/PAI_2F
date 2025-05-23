@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="styl6.css">
+    <script src="skrypt.js"></script>
+</head>
+<body>
+    <section>
+        <aside>
+            <h1>Konfiguranor stylu</h1>
+            <p>Podaj kolor tła</p><br>
+            <button id="indigo">Indigo</button>
+            <button id="steelBlue">SteelBlue</button>
+            <button id="olive">Olive</button><br>
+
+            <p>Podaj kolor czcionki</p>
+            <select id="fontColorSelect">
+                <option value="white">White</option>
+                <option value="tan">Tan</option>
+                <option value="bisque">Bisque</option>
+                <option value="plum">Plum</option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+            <input type="text" id="fontSizeInput" value="100%"/>
+
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <label>
+                <input type="checkbox" id="borderCheckbox" checked/>
+                Rysuj ramkę
+            </label>
+
+            <p>Jaki jest typ punktora listy?</p>
+            <label>
+                <input type="radio" name="listStyle" value="disc" checked>
+                dysk
+            </label><br>
+            <label>
+                <input type="radio" name="listStyle" value="square">
+                kwadrat
+            </label><br>
+            <label>
+                <input type="radio" name="listStyle" value="circle">
+                okrąg
+            </label>  
+        </aside>
+        <aside id="aside">
+            <div id="div">
+                <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+                <ul id="spis">
+                    <li>element 1</li>
+                    <li>element 2</li>
+                    <li>element 3</li>
+                </ul>
+            </div>
+            <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </aside>
+    </section>
+    <footer>
+        <p id="p_footer">Autor: Kateryna Tykhomyrova</p>
+    </footer>
+</body>
+</html>

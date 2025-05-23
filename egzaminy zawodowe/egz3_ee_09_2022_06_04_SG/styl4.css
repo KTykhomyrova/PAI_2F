@@ -1,0 +1,45 @@
+body{
+    font-family: Verdana;
+    text-align: center;
+}
+h1{
+    margin: 0;
+}
+header{
+    background-color: darkgreen;
+    color: white;
+    padding: 5px;
+}
+aside:first-child {
+    background-color: palegreen;
+    width: 30%;
+    height: 500px;
+}
+aside:last-child {
+    background-color: honeydew;
+    width: 70%;
+    height: 500px;
+    padding-top: 100px;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+footer{
+    background-color: palegreen;
+    padding: 3px;
+}
+th, td{
+    border: 1px solid darkgreen;
+    
+}
+button{
+    background-color: darkgreen;
+    color: white;
+    margin: 5px;
+
+}
+button:hover{
+    background-color: honeydew;
+    color: darkgreen;
+}
